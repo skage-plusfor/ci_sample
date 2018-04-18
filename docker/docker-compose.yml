@@ -2,7 +2,7 @@ version: '2'
 
 services:
   allinone:
-    image: ci_sample:latest
+    image: skanno22/ci_sample:latest
     container_name: ci_sample_allinone
     privileged: true
     volumes:
