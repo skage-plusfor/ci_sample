@@ -24,6 +24,9 @@ RUN set -x && \
      yum install -y MariaDB-server MariaDB-client && \
     yum -y clean all
 
+# install library
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 # modify /etc/php.ini
 RUN sed -i -e "s/;date.timezone *=.*$/date.timezone = Asia\/Tokyo/" /etc/php.ini
 
