@@ -6,7 +6,7 @@ services:
     container_name: ci_sample_allinone
     privileged: true
     volumes:
-      - ../../ci_sample:/var/www/html/ci_sample
+      - ../:/var/www/html/ci_sample
       - ./conf/httpd/httpd.conf:/etc/httpd/conf/httpd.conf
     ports:
       - 18080:80  #Apache httpd
