@@ -25,5 +25,5 @@ jobs:
       #    key: v1-dependencies-{{ checksum "composer.json" }}
         
       # run tests!
-      - run: docker-compose up -d
-      - run: docker-compose run allinone /bin/bash -c 'cd /var/www/html/ci_sample && ./vendor/bin/phpunit tests/Unit'
+      - run: cd docker && docker-compose up -d
+      - run: cd docker && docker-compose run allinone /bin/bash -c 'cd /var/www/html/ci_sample && ./vendor/bin/phpunit tests/Unit'
