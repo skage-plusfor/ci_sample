@@ -15,9 +15,35 @@ services:
       - "TZ=Japan"
     command: /sbin/init
 
-  db:
+  mysql1:
     image: mysql:5.7.17
+    container_name: ci_sample_mysql1
     ports:
       - "13306:3306"
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=1
+
+  mysql2:
+    image: mysql:5.7.17
+    container_name: ci_sample_mysql2
+    ports:
+      - "23306:3306"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+
+  mysql3:
+    image: mysql:5.7.17
+    container_name: ci_sample_mysql3
+    ports:
+      - "33306:3306"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+
+  mysql4:
+    image: mysql:5.7.17
+    container_name: ci_sample_mysql4
+    ports:
+      - "43306:3306"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+
