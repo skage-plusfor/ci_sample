@@ -16,5 +16,6 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
         $this->assertFalse(false);
+	    $this->assertFalse(false);
     }
 }
